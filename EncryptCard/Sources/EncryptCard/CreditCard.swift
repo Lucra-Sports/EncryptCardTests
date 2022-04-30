@@ -19,7 +19,7 @@ public struct CreditCard {
     }
     
     public func directPostString(includeCVV: Bool = true) -> String{
-        var result = "ccnumber=" + cardNumber + "&ccexp=" + expirationDate;
+        var result = "ccnumber=" + cardNumber + "&ccexp=" + expirationDate
         if includeCVV, let cvv = cvv {
             result += "&cvv=" + cvv
         }

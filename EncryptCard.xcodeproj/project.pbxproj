@@ -10,6 +10,7 @@
 		4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
+		4BF31FFF281D38DD00AC4E50 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FFE281D38DD00AC4E50 /* Encrypt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIDynamo.h; sourceTree = "<group>"; };
 		4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipedCard.h; sourceTree = "<group>"; };
 		4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		4BF31FFE281D38DD00AC4E50 /* Encrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrypt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
 				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
 				4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */,
+				4BF31FFE281D38DD00AC4E50 /* Encrypt.swift */,
 			);
 			path = AcceptanceTests;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */,
+				4BF31FFF281D38DD00AC4E50 /* Encrypt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,12 +218,14 @@
 		4BF31FC9281D02FF00AC4E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
 		4BF31FCA281D02FF00AC4E50 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};

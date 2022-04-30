@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "EncryptCard",
+    platforms: [
+        .iOS(.v10)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -12,15 +15,17 @@ let package = Package(
             targets: ["EncryptCard"]),
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.5.1"))
     ],
     targets: [
         .target(
             name: "EncryptCard",
-            dependencies: []),
+            dependencies: [
+                .product(name: "CryptoSwift", package: "CryptoSwift", condition: .when(platforms: [.iOS])),
+            ]),
         .testTarget(
             name: "EncryptCardTests",
             dependencies: ["EncryptCard"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
