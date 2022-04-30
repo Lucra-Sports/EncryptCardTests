@@ -18,3 +18,27 @@ class AcceptanceTests: XCTestCase {
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
 }
+
+class SwiftPGEncrypt {
+    enum Error: Swift.Error {
+      case invalidKey(String)
+    }
+    
+    func setKey(_ key: String) throws {
+        if !key.hasPrefix("***") || !key.hasSuffix("***") {
+            throw Error.invalidKey("Key is not valid. Should start and end with '***'")
+        }
+    }
+}
+
+class SwiftPGEncryptTest: XCTestCase {
+    func testInvalidKey() throws {
+        XCTAssertThrowsError(try SwiftPGEncrypt().setKey("invalid"), "should be invalid") { error in
+            if case let .invalidKey(message) = error as? SwiftPGEncrypt.Error {
+                XCTAssertEqual(message, "Key is not valid. Should start and end with '***'")
+            } else {
+                XCTFail("should be invalid key error")
+            }
+        }
+    }
+}
