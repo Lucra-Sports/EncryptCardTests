@@ -9,12 +9,39 @@
 /* Begin PBXBuildFile section */
 		4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
+		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4BF31FCB281D033100AC4E50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EncryptCard; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTests.swift; sourceTree = "<group>"; };
+		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
+		4BF31FE2281D104B00AC4E50 /* PGSwipeUniMagMessageOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeUniMagMessageOptions.h; sourceTree = "<group>"; };
+		4BF31FE3281D104B00AC4E50 /* PGIpsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIpsReader.h; sourceTree = "<group>"; };
+		4BF31FE4281D104B00AC4E50 /* PGSwipeUnimag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeUnimag.h; sourceTree = "<group>"; };
+		4BF31FE5281D104B00AC4E50 /* PGMagnesafeSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMagnesafeSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FE6281D104B00AC4E50 /* PGMobileSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMobileSDK.h; sourceTree = "<group>"; };
+		4BF31FE7281D104B00AC4E50 /* PGEncryptedSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGEncryptedSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FE8281D104B00AC4E50 /* SwipeActivationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeActivationResult.h; sourceTree = "<group>"; };
+		4BF31FE9281D104B00AC4E50 /* PGSwipeDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeDevice.h; sourceTree = "<group>"; };
+		4BF31FEA281D104B00AC4E50 /* PGSwipeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeDelegate.h; sourceTree = "<group>"; };
+		4BF31FEB281D104B00AC4E50 /* AudioJackReaderType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioJackReaderType.h; sourceTree = "<group>"; };
+		4BF31FEC281D104B00AC4E50 /* PGEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGEncrypt.h; sourceTree = "<group>"; };
+		4BF31FED281D104B00AC4E50 /* PGSwipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeController.h; sourceTree = "<group>"; };
+		4BF31FEE281D104B00AC4E50 /* PGAccessoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAccessoryController.h; sourceTree = "<group>"; };
+		4BF31FEF281D104B00AC4E50 /* PGAudioJackConnectionDetectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackConnectionDetectorDelegate.h; sourceTree = "<group>"; };
+		4BF31FF0281D104B00AC4E50 /* PGAudioJackConnectionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackConnectionDetector.h; sourceTree = "<group>"; };
+		4BF31FF1281D104B00AC4E50 /* SwipeReasonUnreadyForSwipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeReasonUnreadyForSwipe.h; sourceTree = "<group>"; };
+		4BF31FF2281D104B00AC4E50 /* PGCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGCard.h; sourceTree = "<group>"; };
+		4BF31FF3281D104B00AC4E50 /* CardReaderAutodetectResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardReaderAutodetectResult.h; sourceTree = "<group>"; };
+		4BF31FF4281D104B00AC4E50 /* PGSwipeIpsEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIpsEnterprise.h; sourceTree = "<group>"; };
+		4BF31FF5281D104B00AC4E50 /* PGAudioJackCardReaderTypeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackCardReaderTypeDetector.h; sourceTree = "<group>"; };
+		4BF31FF6281D104B00AC4E50 /* PGKeyedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGKeyedCard.h; sourceTree = "<group>"; };
+		4BF31FF7281D104B00AC4E50 /* PGSwipeIps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIps.h; sourceTree = "<group>"; };
+		4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIDynamo.h; sourceTree = "<group>"; };
+		4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */,
+				4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +78,8 @@
 		4BF31FD2281D037800AC4E50 /* AcceptanceTests */ = {
 			isa = PBXGroup;
 			children = (
+				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
+				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
 				4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */,
 			);
 			path = AcceptanceTests;
@@ -60,6 +90,47 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */,
+				4BF31FE1281D104B00AC4E50 /* PGMobileSDK */,
+			);
+			name = "Payment Gateway SDK";
+			path = "react-native-nmi-bridge/ios/Payment Gateway SDK";
+			sourceTree = SOURCE_ROOT;
+		};
+		4BF31FE1281D104B00AC4E50 /* PGMobileSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FE2281D104B00AC4E50 /* PGSwipeUniMagMessageOptions.h */,
+				4BF31FE3281D104B00AC4E50 /* PGIpsReader.h */,
+				4BF31FE4281D104B00AC4E50 /* PGSwipeUnimag.h */,
+				4BF31FE5281D104B00AC4E50 /* PGMagnesafeSwipedCard.h */,
+				4BF31FE6281D104B00AC4E50 /* PGMobileSDK.h */,
+				4BF31FE7281D104B00AC4E50 /* PGEncryptedSwipedCard.h */,
+				4BF31FE8281D104B00AC4E50 /* SwipeActivationResult.h */,
+				4BF31FE9281D104B00AC4E50 /* PGSwipeDevice.h */,
+				4BF31FEA281D104B00AC4E50 /* PGSwipeDelegate.h */,
+				4BF31FEB281D104B00AC4E50 /* AudioJackReaderType.h */,
+				4BF31FEC281D104B00AC4E50 /* PGEncrypt.h */,
+				4BF31FED281D104B00AC4E50 /* PGSwipeController.h */,
+				4BF31FEE281D104B00AC4E50 /* PGAccessoryController.h */,
+				4BF31FEF281D104B00AC4E50 /* PGAudioJackConnectionDetectorDelegate.h */,
+				4BF31FF0281D104B00AC4E50 /* PGAudioJackConnectionDetector.h */,
+				4BF31FF1281D104B00AC4E50 /* SwipeReasonUnreadyForSwipe.h */,
+				4BF31FF2281D104B00AC4E50 /* PGCard.h */,
+				4BF31FF3281D104B00AC4E50 /* CardReaderAutodetectResult.h */,
+				4BF31FF4281D104B00AC4E50 /* PGSwipeIpsEnterprise.h */,
+				4BF31FF5281D104B00AC4E50 /* PGAudioJackCardReaderTypeDetector.h */,
+				4BF31FF6281D104B00AC4E50 /* PGKeyedCard.h */,
+				4BF31FF7281D104B00AC4E50 /* PGSwipeIps.h */,
+				4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */,
+				4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */,
+			);
+			path = PGMobileSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +280,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
+				);
 				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.paulz.EncryptCard.AcceptanceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -220,6 +293,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjC-Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -277,9 +351,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
+				);
 				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.paulz.EncryptCard.AcceptanceTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -287,6 +363,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjC-Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

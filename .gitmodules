@@ -1,0 +1,3 @@
+[submodule "react-native-nmi-bridge"]
+	path = react-native-nmi-bridge
+	url = https://github.com/strues/react-native-nmi-bridge.git
