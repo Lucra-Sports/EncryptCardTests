@@ -11,9 +11,10 @@ import CryptoSwift
 
 public class Encrypt {
     public enum Error: Swift.Error {
-      case invalidKey(String)
-      case invalidCertificate
-      case invalidCard
+        case invalidKey(String)
+        case invalidCertificate
+        case invalidCard
+        case failedToEncrypt
     }
     
     public init() {
@@ -37,12 +38,23 @@ public class Encrypt {
     }
     
     public func encrypt(_ string: String) throws -> String {
-        let key = SymmetricKey(size: Self.size)
-        if let data = string.data(using: .ascii) {
-            let sealed = try AES.GCM.seal(data, using: key)
-            return sealed.ciphertext.base64EncodedString()
+        let aesKey = "12345678901234567890123456789012"
+        let ivString = "1234567890123456"
+        let cypher = try AES(key:aesKey, iv:ivString, padding: .pkcs5)
+        let encoded = try cypher.encrypt(string.bytes)
+        var error: Unmanaged<CFError>?
+
+        if let encryptedKey = SecKeyCreateEncryptedData(publicKey!, .rsaEncryptionPKCS1, aesKey.data(using: .ascii)! as CFData, &error) {
+            if let error = error?.takeRetainedValue() {
+                throw error as Swift.Error
+            }
+            var result = Self.format + "|" + Self.version + "|" + keyId!
+            result += "|" + (encryptedKey as Data).base64EncodedString()
+            result += "|" + ivString.bytes.toBase64()
+            result += "|" + encoded.toBase64()
+            return result.bytes.toBase64()
         } else {
-            throw Error.invalidCard
+            throw Error.failedToEncrypt
         }
     }
     
