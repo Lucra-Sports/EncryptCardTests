@@ -6,20 +6,24 @@
 //
 
 import Foundation
-import EncryptCard
 import CryptoKit
+import CryptoSwift
 
 public class Encrypt {
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
       case invalidKey(String)
       case invalidCertificate
       case invalidCard
     }
     
-    var keyId: String?
-    var publicKey: SecKey?
-    var subject: String?
-    var commonName: String?
+    public init() {
+        
+    }
+    
+    public var keyId: String?
+    public var publicKey: SecKey?
+    public var subject: String?
+    public var commonName: String?
     static let padding = "***"
     static let format = "GWSC"
     static let version = "1"
@@ -32,7 +36,7 @@ public class Encrypt {
         String(string.dropLast(Self.padding.count))
     }
     
-    func encrypt(_ string: String) throws -> String {
+    public func encrypt(_ string: String) throws -> String {
         let key = SymmetricKey(size: Self.size)
         if let data = string.data(using: .ascii) {
             let sealed = try AES.GCM.seal(data, using: key)

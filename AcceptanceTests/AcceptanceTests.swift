@@ -40,7 +40,5 @@ class EncryptTest: XCTestCase {
         XCTAssertTrue(encrypt.publicKey.debugDescription.contains(
             "SecKeyRef algorithm id: 1, key type: RSAPublicKey, version: 4, block size: 2048 bits"
         ))
-        let encrypted = try encrypt.encrypt("foo")
-        print(encrypted)
     }
 }
