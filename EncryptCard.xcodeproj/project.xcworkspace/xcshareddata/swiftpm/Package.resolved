@@ -8,6 +8,15 @@
         "revision" : "039f56c5d7960f277087a0be51f5eb04ed0ec073",
         "version" : "1.5.1"
       }
+    },
+    {
+      "identity" : "swiftyrsa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ThrownToys/SwiftyRSA.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2208d64909c452cfcba804a30d38424c911c9a4e"
+      }
     }
   ],
   "version" : 2

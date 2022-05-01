@@ -12,6 +12,7 @@
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
 		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
 		4BF32011281E701800AC4E50 /* EncryptCard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF31FCB281D033100AC4E50 /* EncryptCard */; };
+		4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF32013281E9E7800AC4E50 /* SwiftyRSA */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 			files = (
 				4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */,
 				4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */,
+				4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 			name = AcceptanceTests;
 			packageProductDependencies = (
 				4BF31FD9281D066500AC4E50 /* EncryptCard */,
+				4BF32013281E9E7800AC4E50 /* SwiftyRSA */,
 			);
 			productName = AcceptanceTests;
 			productReference = 4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */;
@@ -186,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 4BF31FC4281D02FF00AC4E50;
+			packageReferences = (
+				4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */,
+			);
 			productRefGroup = 4BF31FD1281D037800AC4E50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -404,10 +410,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThrownToys/SwiftyRSA.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		4BF31FD9281D066500AC4E50 /* EncryptCard */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EncryptCard;
+		};
+		4BF32013281E9E7800AC4E50 /* SwiftyRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */;
+			productName = SwiftyRSA;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
