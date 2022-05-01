@@ -75,10 +75,7 @@ public class Encrypt {
             throw Error.invalidKey("Key is not valid. Should start and end with '***'")
         }
         let keys = withoutPrefix(withoutSuffix(key)).components(separatedBy: .init(charactersIn: "\\|"))
-        guard let keyId = keys.first else {
-            throw Error.invalidKey("no keyId found in \(keys)")
-        }
-        self.keyId = keyId
+        keyId = keys.first!
         
         if let keyBody = keys.last,
            let data = Data(base64Encoded: keyBody),

@@ -60,4 +60,13 @@ class EncryptTest: XCTestCase {
             }
         }
     }
+    func testSetKeyWithoutKeyData() throws {
+        XCTAssertThrowsError(try Encrypt().setKey("***123***"), "should be invalid") { error in
+            if case .invalidCertificate = error as? Encrypt.Error {
+                return
+            } else {
+                XCTFail("should be invalid key error")
+            }
+        }
+    }
 }
