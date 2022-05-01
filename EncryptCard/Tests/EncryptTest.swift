@@ -18,7 +18,7 @@ class EncryptTest: XCTestCase {
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
-    func testDecrypt() throws {
+    func testDecode() throws {
         let card = CreditCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let key = try String(contentsOf: keyUrl)
         let encrypt = Encrypt()
@@ -33,12 +33,12 @@ class EncryptTest: XCTestCase {
         XCTAssertEqual("GWSC", components[0], "format specifier")
         XCTAssertEqual("1", components[1], "version")
         XCTAssertEqual("14340", components[2], "key id")
-        let aesKeyData = try XCTUnwrap(Data(base64Encoded: components[3]))
-        XCTAssertEqual(256, aesKeyData.count)
+        let encryptedAESKeyData = try XCTUnwrap(Data(base64Encoded: components[3]))
+        XCTAssertEqual(256, encryptedAESKeyData.count)
         let ivData = try XCTUnwrap(Data(base64Encoded: components[4]))
         XCTAssertEqual(16, ivData.count)
-        let cardData = try XCTUnwrap(Data(base64Encoded: components[5]))
-        XCTAssertEqual(48, cardData.count)
+        let encryptedCardData = try XCTUnwrap(Data(base64Encoded: components[5]))
+        XCTAssertEqual(48, encryptedCardData.count)
     }
     func testSetKeyToValid() throws {
         let key = try String(contentsOf: keyUrl)
