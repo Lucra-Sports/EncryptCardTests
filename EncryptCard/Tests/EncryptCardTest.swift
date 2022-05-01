@@ -18,7 +18,7 @@ class EncryptCardTest: XCTestCase {
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
-    func testDecode() throws {
+    func testDecodeEncrypted() throws {
         let card = CreditCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let key = try String(contentsOf: keyUrl)
         let encrypt = EncryptCard()
