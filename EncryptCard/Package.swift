@@ -23,11 +23,13 @@ let package = Package(
             name: "EncryptCard",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
-            ]
+            ],
+            path: "Sources"
         ),
         .testTarget(
             name: "EncryptCardTests",
             dependencies: ["EncryptCard"],
+            path: "Tests",
             resources: [.copy("example-payment-gateway-key.txt")]
         ),
     ],
