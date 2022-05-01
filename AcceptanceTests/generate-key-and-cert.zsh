@@ -6,9 +6,10 @@
 #  Created by Paul Zabelin on 4/30/22.
 #  
 here=${0:a:h}
-openssl req -x509 \
+which openssl
+openssl version
+openssl req -x509 -text \
     -nodes -config ${here}/openssl-config.txt \
     -newkey rsa:2048 -set_serial 0 \
     -keyout /tmp/example.key \
-    -out /tmp/example.pem \
-    -writerand /tmp/example.rand.txt
+    -out /tmp/example.pem
