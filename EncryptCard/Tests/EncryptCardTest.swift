@@ -65,7 +65,7 @@ class EncryptCardTest: XCTestCase {
             if case .invalidCertificate = error as? EncryptCard.Error {
                 return
             } else {
-                XCTFail("should be invalid key error")
+                XCTFail("should be invalid certificate error")
             }
         }
     }
