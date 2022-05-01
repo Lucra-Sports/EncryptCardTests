@@ -31,12 +31,7 @@ class AcceptanceTest: XCTestCase {
         XCTAssertEqual("www.safewebservices.com", summary)
     }
     
-    func testDecryptUsingPrivateKey() throws {
-        let pemUrl = try url(file: "example-private-key.txt")
-        let permString = try XCTUnwrap(String(contentsOf: pemUrl))
-        let privateKey = try PrivateKey(pemEncoded: permString)
-        XCTAssertNotNil(privateKey)
-
+    func testDecryptPGEncrypt() throws {
         let keyUrl = try url(file: "example-payment-gateway-key.txt")
         let card = PGKeyedCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let encrypt = PGEncrypt()
@@ -44,6 +39,15 @@ class AcceptanceTest: XCTestCase {
         encrypt.setKey(key)
         let encrypted = encrypt.encrypt(card, includeCVV: true)!
         
+        let cardString = try decrypt(base64: encrypted)
+        XCTAssertEqual(cardString, "ccnumber=4111111111111111&ccexp=10/25&cvv=123")
+    }
+    
+    func decrypt(base64 encrypted: String) throws -> String {
+        let pemUrl = try url(file: "example-private-key.txt")
+        let permString = try XCTUnwrap(String(contentsOf: pemUrl))
+        let privateKey = try PrivateKey(pemEncoded: permString)
+        XCTAssertNotNil(privateKey)
         
         let decodedData = try XCTUnwrap(Data(base64Encoded: encrypted))
         let decodedString = try XCTUnwrap(String(data: decodedData, encoding: .ascii))
@@ -59,15 +63,13 @@ class AcceptanceTest: XCTestCase {
         let cardData = try XCTUnwrap(Data(base64Encoded: components[5]))
         XCTAssertEqual(48, cardData.count)
 
-
         let message = EncryptedMessage(data: aesEncryptedKeyData)
         let aesKeyData = try message.decrypted(with: privateKey, padding: .PKCS1).data
         XCTAssertNotNil(aesKeyData)
         let cypher = try AES(key: aesKeyData.bytes, blockMode: CBC(iv: ivData.bytes), padding: .pkcs5)
         XCTAssertNotNil(cypher)
         let decryptedCard = try cypher.decrypt(cardData.bytes)
-        let cardString = String(data: Data(decryptedCard), encoding: .ascii)
-        XCTAssertEqual(cardString, "ccnumber=4111111111111111&ccexp=10/25&cvv=123")
+        return try XCTUnwrap(String(data: Data(decryptedCard), encoding: .ascii))
     }
 
     func testPGEncrypt() throws {
