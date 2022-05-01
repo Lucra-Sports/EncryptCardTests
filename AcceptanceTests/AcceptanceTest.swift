@@ -11,6 +11,27 @@ import CryptoSwift
 import SwiftyRSA
 
 class AcceptanceTest: XCTestCase {
+    func testDecryptPGEncrypt() throws {
+        try verifyDecrypt { testCard in
+            let card = PGKeyedCard(cardNumber: testCard.cardNumber,
+                                   expirationDate: testCard.expirationDate,
+                                   cvv: testCard.cvv)
+            let encrypt = PGEncrypt()
+            encrypt.setKey(testCard.key)
+            return try XCTUnwrap(encrypt.encrypt(card, includeCVV: true))
+        }
+    }
+    func testDecryptEncrypt() throws {
+        try verifyDecrypt { testCard in
+            let encrypt = Encrypt()
+            try encrypt.setKey(testCard.key)
+            let card = CreditCard(cardNumber: testCard.cardNumber,
+                                  expirationDate: testCard.expirationDate,
+                                  cvv: testCard.cvv)
+            return try encrypt.encrypt(creditCard: card)
+        }
+    }
+    
     func url(file: String) throws -> URL {
         URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()
@@ -56,27 +77,7 @@ class AcceptanceTest: XCTestCase {
                        + "&ccexp=" + testCard.expirationDate
                        + (testCard.cvv.flatMap{"&cvv=\($0)"} ?? ""))
     }
-    
-    func testDecryptPGEncrypt() throws {
-        try verifyDecrypt { testCard in
-            let card = PGKeyedCard(cardNumber: testCard.cardNumber,
-                                   expirationDate: testCard.expirationDate,
-                                   cvv: testCard.cvv)
-            let encrypt = PGEncrypt()
-            encrypt.setKey(testCard.key)
-            return try XCTUnwrap(encrypt.encrypt(card, includeCVV: true))
-        }
-    }
-    func testDecryptEncrypt() throws {
-        try verifyDecrypt { testCard in
-            let encrypt = Encrypt()
-            try encrypt.setKey(testCard.key)
-            let card = CreditCard(cardNumber: testCard.cardNumber,
-                                  expirationDate: testCard.expirationDate,
-                                  cvv: testCard.cvv)
-            return try encrypt.encrypt(creditCard: card)
-        }
-    }
+
 
     func decrypt(base64 encrypted: String) throws -> String {
         let pemUrl = try url(file: "example-private-key.txt")
