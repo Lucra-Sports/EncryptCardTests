@@ -41,21 +41,21 @@ public class Encrypt {
         guard let publicKey = publicKey, let keyId = keyId else {
             throw Error.invalidKey("key is not set, unable to encrypt")
         }
-        let aesKey = "12345678901234567890123456789012"
-        let ivString = "1234567890123456"
-        let cypher = try AES(key:aesKey, iv:ivString, padding: .pkcs5)
+        let randomKey = AES.randomIV(32)
+        let iv = AES.randomIV(16)
+        let cypher = try AES(key: randomKey, blockMode: CBC(iv: iv), padding: .pkcs5)
         let encoded = try cypher.encrypt(string.bytes)
         var error: Unmanaged<CFError>?
 
-        if let aesKeyData = aesKey.data(using: .ascii),
-           let encryptedKey = SecKeyCreateEncryptedData(
+        let aesKeyData = Data(randomKey)
+        if let encryptedKey = SecKeyCreateEncryptedData(
             publicKey,
             .rsaEncryptionPKCS1,
             aesKeyData as CFData,
             &error) {
             var result = Self.format + "|" + Self.version + "|" + keyId
             result += "|" + (encryptedKey as Data).base64EncodedString()
-            result += "|" + ivString.bytes.toBase64()
+            result += "|" + iv.toBase64()
             result += "|" + encoded.toBase64()
             return result.bytes.toBase64()
         } else {
