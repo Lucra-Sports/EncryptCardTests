@@ -26,16 +26,6 @@ then
     exit 1
 fi
 
-modulus=${modulus1//Modulus=/}
-echo $modulus | xxd -r -p > ./example-rsa-modulus.bin
-zmodload zsh/stat
-stat -A size +size ./example-rsa-modulus.bin
-
-if [[ $size -ne 256 ]]
-then
-    echo "Wrong RSA modulus size, expecting 256"; exit 2
-fi
-
 openssl x509 \
     -in ./example-certificate.pem.txt \
     -out ./example-certificate.cer \
