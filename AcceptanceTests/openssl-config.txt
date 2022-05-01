@@ -1,5 +1,6 @@
 [ req ]
 prompt                          = no
+encrypt_key                     = no
 distinguished_name              = req_distinguished_name
 x509_extensions                 = req_x509_extensions
 

@@ -8,9 +8,15 @@
 pushd ${0:a:h}
 which openssl
 openssl version
+
 openssl req -x509 \
-    -nodes -config ./openssl-config.txt \
+    -config ./openssl-config.txt \
     -newkey rsa:2048 -set_serial 0 \
     -keyout ./example-private-key.txt \
-    -out ./example-certificate.pem
+    -out ./example-certificate.pem.txt
+
+openssl x509 \
+    -in ./example-certificate.pem.txt \
+    -out ./example-certificate.cer \
+    -outform der
 popd
