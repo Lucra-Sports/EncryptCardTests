@@ -38,7 +38,7 @@ public class Encrypt {
     }
     
     public func encrypt(_ string: String) throws -> String {
-        guard let publicKey = publicKey else {
+        guard let publicKey = publicKey, let keyId = keyId else {
             throw Error.invalidKey("key is not set, unable to encrypt")
         }
         let aesKey = "12345678901234567890123456789012"
@@ -53,7 +53,7 @@ public class Encrypt {
             .rsaEncryptionPKCS1,
             aesKeyData as CFData,
             &error) {
-            var result = Self.format + "|" + Self.version + "|" + keyId!
+            var result = Self.format + "|" + Self.version + "|" + keyId
             result += "|" + (encryptedKey as Data).base64EncodedString()
             result += "|" + ivString.bytes.toBase64()
             result += "|" + encoded.toBase64()
