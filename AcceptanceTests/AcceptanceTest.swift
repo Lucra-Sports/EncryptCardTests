@@ -9,21 +9,24 @@ import XCTest
 import EncryptCard
 import CryptoSwift
 
-class AcceptanceTests: XCTestCase {
-    func testPGEncrypt() throws {
-        let card = PGKeyedCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
-        let encrypt = PGEncrypt()
-        let key = try! String(contentsOf: URL(fileURLWithPath: "/tmp/key.txt"))
-        encrypt.setKey(key)
-        let encrypted = encrypt.encrypt(card, includeCVV: true)!
-        XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
+class AcceptanceTest: XCTestCase {
+    let bundle = Bundle(for: AcceptanceTest.self)
+    let exampleKeyFileName = "example-payment-gateway-key.txt"
+    
+    func url(file: String) throws -> URL {
+        try XCTUnwrap(bundle.url(forResource: file,
+                                 withExtension: nil))
     }
-    func testPEMtoPGkey() throws {
-        let cerUrl = try XCTUnwrap(Bundle(for: AcceptanceTests.self)
-            .url(forResource: "example-certificate", withExtension: "cer"))
+                               
+    func testConvertingCertificateToPGEncryptKey() throws {
+        let cerUrl = try url(file: "example-certificate.cer")
         let cerData = try Data(contentsOf: cerUrl)
-        let certificate = try XCTUnwrap(SecCertificateCreateWithData(kCFAllocatorDefault, cerData as CFData))
-        let summary = try XCTUnwrap(SecCertificateCopySubjectSummary(certificate)) as String
+        let certificate = try XCTUnwrap(
+            SecCertificateCreateWithData(kCFAllocatorDefault, cerData as CFData)
+        )
+        let summary = try XCTUnwrap(
+            SecCertificateCopySubjectSummary(certificate)
+        ) as String
         XCTAssertEqual("www.safewebservices.com", summary)
         
         let pgKey = "***14340|" + cerData.base64EncodedString() + "***"
@@ -31,13 +34,17 @@ class AcceptanceTests: XCTestCase {
             .deletingLastPathComponent()
             .appendingPathComponent("example-payment-gateway-key.txt")
         try pgKey.write(to: pgKeyUrl, atomically: true, encoding: .ascii)
-
+    }
+    func testPGEncrypt() throws {
+        let keyUrl = try url(file: exampleKeyFileName)
         let card = PGKeyedCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let encrypt = PGEncrypt()
-        encrypt.setKey(pgKey)
+        let key = try String(contentsOf: keyUrl)
+        encrypt.setKey(key)
         let encrypted = encrypt.encrypt(card, includeCVV: true)!
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
+
 }
 
 class EncryptTest: XCTestCase {

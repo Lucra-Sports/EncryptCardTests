@@ -14,6 +14,7 @@
 		4BF3200A281E4F8300AC4E50 /* example-private-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF32008281E4F8300AC4E50 /* example-private-key.txt */; };
 		4BF3200B281E4F8300AC4E50 /* example-certificate.pem.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */; };
 		4BF3200D281E5CA200AC4E50 /* example-certificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */; };
+		4BF3200F281E61D600AC4E50 /* example-payment-gateway-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4BF32008281E4F8300AC4E50 /* example-private-key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-private-key.txt"; sourceTree = "<group>"; };
 		4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-certificate.pem.txt"; sourceTree = "<group>"; };
 		4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "example-certificate.cer"; sourceTree = "<group>"; };
+		4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-payment-gateway-key.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */,
 				4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */,
 				4BF32008281E4F8300AC4E50 /* example-private-key.txt */,
+				4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */,
 				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
 				4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */,
 				4BF32001281DE78500AC4E50 /* openssl-config.txt */,
@@ -211,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF3200D281E5CA200AC4E50 /* example-certificate.cer in Resources */,
+				4BF3200F281E61D600AC4E50 /* example-payment-gateway-key.txt in Resources */,
 				4BF3200A281E4F8300AC4E50 /* example-private-key.txt in Resources */,
 				4BF3200B281E4F8300AC4E50 /* example-certificate.pem.txt in Resources */,
 			);
