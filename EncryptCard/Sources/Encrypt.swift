@@ -75,11 +75,16 @@ public class Encrypt {
             throw Error.invalidKey("Key is not valid. Should start and end with '***'")
         }
         let keys = withoutPrefix(withoutSuffix(key)).components(separatedBy: .init(charactersIn: "\\|"))
-        keyId = keys[0]
-        if let data = Data(base64Encoded: keys[1]),
+        guard let keyId = keys.first else {
+            throw Error.invalidKey("no keyId found in \(keys)")
+        }
+        self.keyId = keyId
+        
+        if let keyBody = keys.last,
+           let data = Data(base64Encoded: keyBody),
            let certificate = SecCertificateCreateWithData(kCFAllocatorDefault, data as CFData),
            let secKey = SecCertificateCopyKey(certificate),
-           SecKeyIsAlgorithmSupported(secKey, .encrypt, .rsaEncryptionRaw),
+           SecKeyIsAlgorithmSupported(secKey, .encrypt, .rsaEncryptionPKCS1),
            let summary = SecCertificateCopySubjectSummary(certificate) {
             var name: CFString?
             SecCertificateCopyCommonName(certificate, &name)

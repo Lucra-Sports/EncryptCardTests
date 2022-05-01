@@ -61,10 +61,7 @@ class AcceptanceTest: XCTestCase {
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
         
         let cardString = try decrypt(base64: encrypted)
-        XCTAssertEqual(cardString,
-                       "ccnumber=" + testCard.cardNumber
-                       + "&ccexp=" + testCard.expirationDate
-                       + (testCard.cvv.flatMap{"&cvv=\($0)"} ?? ""))
+        XCTAssertEqual(cardString, testCard.directPostString())
     }
 
 
@@ -90,9 +87,7 @@ class AcceptanceTest: XCTestCase {
 
         let message = EncryptedMessage(data: aesEncryptedKeyData)
         let aesKeyData = try message.decrypted(with: privateKey, padding: .PKCS1).data
-        XCTAssertNotNil(aesKeyData)
         let cypher = try AES(key: aesKeyData.bytes, blockMode: CBC(iv: ivData.bytes), padding: .pkcs5)
-        XCTAssertNotNil(cypher)
         let decryptedCard = try cypher.decrypt(cardData.bytes)
         return try XCTUnwrap(String(data: Data(decryptedCard), encoding: .ascii))
     }
