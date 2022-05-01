@@ -18,6 +18,28 @@ class EncryptTest: XCTestCase {
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
+    func testDecrypt() throws {
+        let card = CreditCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
+        let key = try String(contentsOf: keyUrl)
+        let encrypt = Encrypt()
+        try encrypt.setKey(key)
+        let encrypted = try encrypt.encrypt(creditCard: card)
+        XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
+        
+        let decodedData = try XCTUnwrap(Data(base64Encoded: encrypted))
+        let decodedString = try XCTUnwrap(String(data: decodedData, encoding: .ascii))
+        let components = decodedString.components(separatedBy: "|")
+        XCTAssertEqual(6, components.count)
+        XCTAssertEqual("GWSC", components[0], "format specifier")
+        XCTAssertEqual("1", components[1], "version")
+        XCTAssertEqual("14340", components[2], "key id")
+        let aesKeyData = try XCTUnwrap(Data(base64Encoded: components[3]))
+        XCTAssertEqual(256, aesKeyData.count)
+        let ivData = try XCTUnwrap(Data(base64Encoded: components[4]))
+        XCTAssertEqual(16, ivData.count)
+        let cardData = try XCTUnwrap(Data(base64Encoded: components[5]))
+        XCTAssertEqual(48, cardData.count)
+    }
     func testSetKeyToValid() throws {
         let key = try String(contentsOf: keyUrl)
         let encrypt = Encrypt()
