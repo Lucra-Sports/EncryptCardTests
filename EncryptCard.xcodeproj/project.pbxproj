@@ -10,6 +10,7 @@
 		4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
+		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,9 @@
 		4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIDynamo.h; sourceTree = "<group>"; };
 		4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipedCard.h; sourceTree = "<group>"; };
 		4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjC-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "generate-key-and-cert.zsh"; sourceTree = "<group>"; };
+		4BF32001281DE78500AC4E50 /* openssl-config.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "openssl-config.txt"; sourceTree = "<group>"; };
+		4BF32002281E364400AC4E50 /* ExploratoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploratoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,9 @@
 				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
 				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
 				4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */,
+				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
+				4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */,
+				4BF32001281DE78500AC4E50 /* openssl-config.txt */,
 			);
 			path = AcceptanceTests;
 			sourceTree = "<group>";
@@ -205,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */,
+				4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 
 import Foundation
 import XCTest
+import Security
 
 class ExploratoryTest: XCTestCase {
     func testErrorPointer() throws {
@@ -15,11 +16,11 @@ class ExploratoryTest: XCTestCase {
         if let error = cfErrorPtr?.takeRetainedValue() {
             let nsError = error as Error as NSError
             XCTAssertEqual(nsError.domain, NSOSStatusErrorDomain)
-            XCTAssertEqual(nsError.code, Int(errSecParam))
+            XCTAssertEqual(nsError.code, Int(errSecUnimplemented))
             XCTAssertEqual(nsError.userInfo["NSDescription"] as? String,
-                           "failed to generate asymmetric keypair")
+                           "Key generation failed, error -4")
             XCTAssertEqual(SecCopyErrorMessageString(OSStatus(nsError.code), nil) as? String,
-                           "One or more parameters passed to a function were not valid.")
+                           "Function or operation not implemented.")
         }
         XCTAssertNil(newKey)
     }
