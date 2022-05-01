@@ -9,7 +9,7 @@ import Foundation
 import CryptoKit
 import CryptoSwift
 
-public class Encrypt {
+public class EncryptCard {
     public enum Error: Swift.Error {
         case invalidKey(String)
         case invalidCertificate

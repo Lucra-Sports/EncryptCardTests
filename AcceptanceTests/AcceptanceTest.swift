@@ -23,7 +23,7 @@ class AcceptanceTest: XCTestCase {
     }
     func testDecryptEncrypt() throws {
         try verifyDecrypt { card, key in
-            let encrypt = Encrypt()
+            let encrypt = EncryptCard()
             try encrypt.setKey(key)
             return try encrypt.encrypt(creditCard: card)
         }

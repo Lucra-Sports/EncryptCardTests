@@ -8,12 +8,12 @@
 import XCTest
 import EncryptCard
 
-class EncryptTest: XCTestCase {
+class EncryptCardTest: XCTestCase {
     var keyUrl = Bundle.module.url(forResource: "example-payment-gateway-key.txt",
                                    withExtension: nil)!
     func testEncryptString() throws {
         let key = try String(contentsOf: keyUrl)
-        let encrypt = Encrypt()
+        let encrypt = EncryptCard()
         try encrypt.setKey(key)
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
@@ -21,7 +21,7 @@ class EncryptTest: XCTestCase {
     func testDecode() throws {
         let card = CreditCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let key = try String(contentsOf: keyUrl)
-        let encrypt = Encrypt()
+        let encrypt = EncryptCard()
         try encrypt.setKey(key)
         let encrypted = try encrypt.encrypt(creditCard: card)
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
@@ -42,7 +42,7 @@ class EncryptTest: XCTestCase {
     }
     func testSetKeyToValid() throws {
         let key = try String(contentsOf: keyUrl)
-        let encrypt = Encrypt()
+        let encrypt = EncryptCard()
         try encrypt.setKey(key)
         XCTAssertEqual("14340", encrypt.keyId)
         XCTAssertEqual("www.safewebservices.com", encrypt.subject)
@@ -52,8 +52,8 @@ class EncryptTest: XCTestCase {
         ))
     }
     func testSetKeyInvalid() throws {
-        XCTAssertThrowsError(try Encrypt().setKey("invalid"), "should be invalid") { error in
-            if case let .invalidKey(message) = error as? Encrypt.Error {
+        XCTAssertThrowsError(try EncryptCard().setKey("invalid"), "should be invalid") { error in
+            if case let .invalidKey(message) = error as? EncryptCard.Error {
                 XCTAssertEqual(message, "Key is not valid. Should start and end with '***'")
             } else {
                 XCTFail("should be invalid key error")
@@ -61,8 +61,8 @@ class EncryptTest: XCTestCase {
         }
     }
     func testSetKeyWithoutKeyData() throws {
-        XCTAssertThrowsError(try Encrypt().setKey("***123***"), "should be invalid") { error in
-            if case .invalidCertificate = error as? Encrypt.Error {
+        XCTAssertThrowsError(try EncryptCard().setKey("***123***"), "should be invalid") { error in
+            if case .invalidCertificate = error as? EncryptCard.Error {
                 return
             } else {
                 XCTFail("should be invalid key error")
