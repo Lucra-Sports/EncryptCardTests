@@ -6,28 +6,25 @@
 //
 
 import XCTest
-import EncryptCard
+@testable import EncryptCard
 import CryptoSwift
 import SwiftyRSA
 
 class AcceptanceTest: XCTestCase {
     func testDecryptPGEncrypt() throws {
-        try verifyDecrypt { testCard in
-            let card = PGKeyedCard(cardNumber: testCard.cardNumber,
-                                   expirationDate: testCard.expirationDate,
-                                   cvv: testCard.cvv)
+        try verifyDecrypt { card, key in
+            let card = PGKeyedCard(cardNumber: card.cardNumber,
+                                   expirationDate: card.expirationDate,
+                                   cvv: card.cvv)
             let encrypt = PGEncrypt()
-            encrypt.setKey(testCard.key)
+            encrypt.setKey(key)
             return try XCTUnwrap(encrypt.encrypt(card, includeCVV: true))
         }
     }
     func testDecryptEncrypt() throws {
-        try verifyDecrypt { testCard in
+        try verifyDecrypt { card, key in
             let encrypt = Encrypt()
-            try encrypt.setKey(testCard.key)
-            let card = CreditCard(cardNumber: testCard.cardNumber,
-                                  expirationDate: testCard.expirationDate,
-                                  cvv: testCard.cvv)
+            try encrypt.setKey(key)
             return try encrypt.encrypt(creditCard: card)
         }
     }
@@ -52,23 +49,15 @@ class AcceptanceTest: XCTestCase {
         XCTAssertEqual("www.safewebservices.com", summary)
     }
     
-    struct TestCardAndKey {
-        let key: String
-        let cardNumber: String
-        let expirationDate: String
-        let cvv: String?
-    }
-    
-    func verifyDecrypt(usingEncryption: (TestCardAndKey) throws -> String) throws {
+    func verifyDecrypt(usingEncryption: (CreditCard, String) throws -> String) throws {
         let keyUrl = try url(file: "example-payment-gateway-key.txt")
         let key = try String(contentsOf: keyUrl)
-        let testCard = TestCardAndKey(
-            key: key,
+        let testCard = CreditCard(
             cardNumber: "4111111111111111",
             expirationDate: "10/25",
             cvv: "123"
         )
-        let encrypted = try usingEncryption(testCard)
+        let encrypted = try usingEncryption(testCard, key)
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
         
         let cardString = try decrypt(base64: encrypted)
