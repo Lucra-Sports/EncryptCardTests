@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BF31FCB281D033100AC4E50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EncryptCard; sourceTree = "<group>"; };
+		4BF31FCB281D033100AC4E50 /*  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ""; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		4BF31FC4281D02FF00AC4E50 = {
 			isa = PBXGroup;
 			children = (
-				4BF31FCB281D033100AC4E50 /* EncryptCard */,
+				4BF31FCB281D033100AC4E50 /*  */,
 				4BF31FD2281D037800AC4E50 /* AcceptanceTests */,
 				4BF32010281E6DC500AC4E50 /* bin */,
 				4BF31FD1281D037800AC4E50 /* Products */,
@@ -106,7 +106,7 @@
 				4BF31FE1281D104B00AC4E50 /* PGMobileSDK */,
 			);
 			name = "Payment Gateway SDK";
-			path = "react-native-nmi-bridge/ios/Payment Gateway SDK";
+			path = "AcceptanceTests/react-native-nmi-bridge/ios/Payment Gateway SDK";
 			sourceTree = SOURCE_ROOT;
 		};
 		4BF31FE1281D104B00AC4E50 /* PGMobileSDK */ = {
