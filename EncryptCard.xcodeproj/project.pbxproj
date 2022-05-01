@@ -11,10 +11,7 @@
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
 		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
-		4BF3200A281E4F8300AC4E50 /* example-private-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF32008281E4F8300AC4E50 /* example-private-key.txt */; };
-		4BF3200B281E4F8300AC4E50 /* example-certificate.pem.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */; };
-		4BF3200D281E5CA200AC4E50 /* example-certificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */; };
-		4BF3200F281E61D600AC4E50 /* example-payment-gateway-key.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */; };
+		4BF32011281E701800AC4E50 /* EncryptCard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF31FCB281D033100AC4E50 /* EncryptCard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,13 +44,8 @@
 		4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIDynamo.h; sourceTree = "<group>"; };
 		4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipedCard.h; sourceTree = "<group>"; };
 		4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ObjC-Bridging.h"; path = "AcceptanceTests/ObjC-Bridging.h"; sourceTree = SOURCE_ROOT; };
-		4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "generate-key-and-cert.zsh"; sourceTree = "<group>"; };
-		4BF32001281DE78500AC4E50 /* openssl-config.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "openssl-config.txt"; sourceTree = "<group>"; };
 		4BF32002281E364400AC4E50 /* ExploratoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploratoryTest.swift; sourceTree = "<group>"; };
-		4BF32008281E4F8300AC4E50 /* example-private-key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-private-key.txt"; sourceTree = "<group>"; };
-		4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-certificate.pem.txt"; sourceTree = "<group>"; };
-		4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "example-certificate.cer"; sourceTree = "<group>"; };
-		4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "example-payment-gateway-key.txt"; sourceTree = "<group>"; };
+		4BF32010281E6DC500AC4E50 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +66,7 @@
 			children = (
 				4BF31FCB281D033100AC4E50 /* EncryptCard */,
 				4BF31FD2281D037800AC4E50 /* AcceptanceTests */,
+				4BF32010281E6DC500AC4E50 /* bin */,
 				4BF31FD1281D037800AC4E50 /* Products */,
 				4BF31FD8281D066500AC4E50 /* Frameworks */,
 			);
@@ -93,13 +86,7 @@
 				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
 				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
 				4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */,
-				4BF32009281E4F8300AC4E50 /* example-certificate.pem.txt */,
-				4BF3200C281E5C9F00AC4E50 /* example-certificate.cer */,
-				4BF32008281E4F8300AC4E50 /* example-private-key.txt */,
-				4BF3200E281E61D600AC4E50 /* example-payment-gateway-key.txt */,
 				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
-				4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */,
-				4BF32001281DE78500AC4E50 /* openssl-config.txt */,
 			);
 			path = AcceptanceTests;
 			sourceTree = "<group>";
@@ -213,10 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF3200D281E5CA200AC4E50 /* example-certificate.cer in Resources */,
-				4BF3200F281E61D600AC4E50 /* example-payment-gateway-key.txt in Resources */,
-				4BF3200A281E4F8300AC4E50 /* example-private-key.txt in Resources */,
-				4BF3200B281E4F8300AC4E50 /* example-certificate.pem.txt in Resources */,
+				4BF32011281E701800AC4E50 /* EncryptCard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

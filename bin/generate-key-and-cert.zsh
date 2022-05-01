@@ -4,13 +4,15 @@
 #  EncryptCard
 #
 #  Created by Paul Zabelin on 4/30/22.
-#  
-pushd ${0:a:h}
+#
+scriptDir=${0:a:h}
+pushd ${scriptDir}/../EncryptCard/Tests
+
 which openssl
 openssl version
 
 openssl req -x509 \
-    -config ./openssl-config.txt \
+    -config ${scriptDir}/openssl-config.txt \
     -newkey rsa:2048 -set_serial 0 \
     -keyout ./example-private-key.txt \
     -out ./example-certificate.pem.txt

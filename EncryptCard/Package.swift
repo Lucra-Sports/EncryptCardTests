@@ -30,7 +30,12 @@ let package = Package(
             name: "EncryptCardTests",
             dependencies: ["EncryptCard"],
             path: "Tests",
-            resources: [.copy("example-payment-gateway-key.txt")]
+            resources: [
+                .copy("example-certificate.cer"),
+                .copy("example-certificate.pem.txt"),
+                .copy("example-payment-gateway-key.txt"),
+                .copy("example-private-key.txt")
+            ]
         ),
     ],
     swiftLanguageVersions: [.v5]

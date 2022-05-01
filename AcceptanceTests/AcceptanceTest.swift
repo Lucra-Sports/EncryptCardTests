@@ -10,12 +10,14 @@ import EncryptCard
 import CryptoSwift
 
 class AcceptanceTest: XCTestCase {
-    let bundle = Bundle(for: AcceptanceTest.self)
     let exampleKeyFileName = "example-payment-gateway-key.txt"
     
     func url(file: String) throws -> URL {
-        try XCTUnwrap(bundle.url(forResource: file,
-                                 withExtension: nil))
+        URL(fileURLWithPath: #filePath)
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("EncryptCard/Tests")
+            .appendingPathComponent(file)
     }
                                
     func testCertificate() throws {
