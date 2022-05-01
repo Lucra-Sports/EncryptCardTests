@@ -16,4 +16,13 @@ class EncryptTest: XCTestCase {
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
+    func testInvalidKey() throws {
+        XCTAssertThrowsError(try Encrypt().setKey("invalid"), "should be invalid") { error in
+            if case let .invalidKey(message) = error as? Encrypt.Error {
+                XCTAssertEqual(message, "Key is not valid. Should start and end with '***'")
+            } else {
+                XCTFail("should be invalid key error")
+            }
+        }
+    }
 }

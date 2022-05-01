@@ -47,17 +47,7 @@ class AcceptanceTest: XCTestCase {
 
 }
 
-class EncryptTest: XCTestCase {
-    func testInvalidKey() throws {
-        XCTAssertThrowsError(try Encrypt().setKey("invalid"), "should be invalid") { error in
-            if case let .invalidKey(message) = error as? Encrypt.Error {
-                XCTAssertEqual(message, "Key is not valid. Should start and end with '***'")
-            } else {
-                XCTFail("should be invalid key error")
-            }
-        }
-    }
-    
+class EncryptTest: XCTestCase {    
     func testValidKey() throws {
         let key = try! String(contentsOf: URL(fileURLWithPath: "/tmp/key.txt"))
         let encrypt = Encrypt()
