@@ -11,14 +11,14 @@ import EncryptCard
 class EncryptTest: XCTestCase {
     var keyUrl = Bundle.module.url(forResource: "example-payment-gateway-key.txt",
                                    withExtension: nil)!
-    func testEncrypt() throws {
+    func testEncryptString() throws {
         let key = try String(contentsOf: keyUrl)
         let encrypt = Encrypt()
         try encrypt.setKey(key)
         let encrypted = try encrypt.encrypt("sample")
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
     }
-    func testValidKey() throws {
+    func testSetKeyToValid() throws {
         let key = try String(contentsOf: keyUrl)
         let encrypt = Encrypt()
         try encrypt.setKey(key)
@@ -29,7 +29,7 @@ class EncryptTest: XCTestCase {
             "SecKeyRef algorithm id: 1, key type: RSAPublicKey, version: 4, block size: 2048 bits"
         ))
     }
-    func testInvalidKey() throws {
+    func testSetKeyInvalid() throws {
         XCTAssertThrowsError(try Encrypt().setKey("invalid"), "should be invalid") { error in
             if case let .invalidKey(message) = error as? Encrypt.Error {
                 XCTAssertEqual(message, "Key is not valid. Should start and end with '***'")

@@ -10,8 +10,6 @@ import EncryptCard
 import CryptoSwift
 
 class AcceptanceTest: XCTestCase {
-    let exampleKeyFileName = "example-payment-gateway-key.txt"
-    
     func url(file: String) throws -> URL {
         URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()
@@ -32,27 +30,12 @@ class AcceptanceTest: XCTestCase {
         XCTAssertEqual("www.safewebservices.com", summary)
     }
     func testPGEncrypt() throws {
-        let keyUrl = try url(file: exampleKeyFileName)
+        let keyUrl = try url(file: "example-payment-gateway-key.txt")
         let card = PGKeyedCard(cardNumber: "4111111111111111", expirationDate: "10/25", cvv: "123")
         let encrypt = PGEncrypt()
         let key = try String(contentsOf: keyUrl)
         encrypt.setKey(key)
         let encrypted = encrypt.encrypt(card, includeCVV: true)!
         XCTAssertTrue(encrypted.hasPrefix("R1dTQ3wxfDE0MzQwf"))
-    }
-
-}
-
-class EncryptTest: XCTestCase {
-    func testValidKey() throws {
-        let key = try! String(contentsOf: URL(fileURLWithPath: "/tmp/key.txt"))
-        let encrypt = Encrypt()
-        try encrypt.setKey(key)
-        XCTAssertEqual("14340", encrypt.keyId)
-        XCTAssertEqual("www.safewebservices.com", encrypt.subject)
-        XCTAssertEqual("www.safewebservices.com", encrypt.commonName)
-        XCTAssertTrue(encrypt.publicKey.debugDescription.contains(
-            "SecKeyRef algorithm id: 1, key type: RSAPublicKey, version: 4, block size: 2048 bits"
-        ))
     }
 }

@@ -24,15 +24,4 @@ class ExploratoryTest: XCTestCase {
         }
         XCTAssertNil(newKey)
     }
-    func testLoadPublicKey() throws {
-        let key = try! String(contentsOf: URL(fileURLWithPath: "/tmp/key.txt"))
-        let keys = key.trimmingCharacters(in: .init(charactersIn: "*")).components(separatedBy: .init(charactersIn: "\\|"))
-        if let data = Data(base64Encoded: keys[1]),
-           let certificate = SecCertificateCreateWithData(kCFAllocatorDefault, data as CFData),
-           let secKey = SecCertificateCopyKey(certificate) {
-            print(secKey)
-            let data = SecCertificateCopyData(certificate) as Data
-            try data.write(to: URL(fileURLWithPath: "/tmp/key-to-cert.crt"))
-        }
-    }
 }
