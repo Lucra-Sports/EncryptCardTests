@@ -17,9 +17,7 @@ public class Encrypt {
         case failedToEncrypt
     }
     
-    public init() {
-        
-    }
+    public init() {}
     
     public var keyId: String?
     public var publicKey: SecKey?
@@ -28,7 +26,6 @@ public class Encrypt {
     static let padding = "***"
     static let format = "GWSC"
     static let version = "1"
-    static let size: SymmetricKeySize = .bits256
     
     func withoutPrefix(_ string: String) -> String {
         String(string.dropFirst(Self.padding.count))
@@ -74,7 +71,8 @@ public class Encrypt {
         if !key.hasPrefix(Self.padding) || !key.hasSuffix(Self.padding) {
             throw Error.invalidKey("Key is not valid. Should start and end with '***'")
         }
-        let keys = withoutPrefix(withoutSuffix(key)).components(separatedBy: .init(charactersIn: "\\|"))
+        let keys = withoutPrefix(withoutSuffix(key))
+            .components(separatedBy: .init(charactersIn: "\\|"))
         keyId = keys.first!
         
         if let keyBody = keys.last,
