@@ -1,11 +1,5 @@
 prompt            = no
 
-[ ca ]
-default_ca = CA_LOC
-
-[ CA_LOC ]
-prompt            = no
-
 [ req ]
 serialNumber                    = 0
 crlnumber = 0
@@ -13,9 +7,11 @@ serial = 0
 distinguished_name = req_distinguished_name
 
 [ req_distinguished_name ]
-commonName                      = www.safewebservices.com
+countryName                     = US
+stateOrProvinceName             = Illinois
+localityName                    = Schaumburg
 organizationName                = SafeWebServices
 organizationalUnitName          = End-to-end encryption
-localityName                    = Schaumburg
-stateOrProvinceName             = Illinois
-countryName                     = US
+commonName                      = www.safewebservices.com
+emailAddress                    = support@safewebservices.com
+

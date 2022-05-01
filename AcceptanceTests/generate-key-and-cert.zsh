@@ -5,5 +5,10 @@
 #
 #  Created by Paul Zabelin on 4/30/22.
 #  
-
-openssl req -x509 -nodes -config openssl-config.txt -newkey rsa:2048 -keyout /tmp/example.key -out /tmp/example.pem
+here=${0:a:h}
+openssl req -x509 \
+    -nodes -config ${here}/openssl-config.txt \
+    -newkey rsa:2048 -set_serial 0 \
+    -keyout /tmp/example.key \
+    -out /tmp/example.pem \
+    -writerand /tmp/example.rand.txt

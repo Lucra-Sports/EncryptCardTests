@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */; };
+		4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
 		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		4BF31FCB281D033100AC4E50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EncryptCard; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTests.swift; sourceTree = "<group>"; };
+		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
 		4BF31FE2281D104B00AC4E50 /* PGSwipeUniMagMessageOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeUniMagMessageOptions.h; sourceTree = "<group>"; };
 		4BF31FE3281D104B00AC4E50 /* PGIpsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIpsReader.h; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			children = (
 				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
 				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
-				4BF31FD3281D037800AC4E50 /* AcceptanceTests.swift */,
+				4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */,
 				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
 				4BF32000281DE57C00AC4E50 /* generate-key-and-cert.zsh */,
 				4BF32001281DE78500AC4E50 /* openssl-config.txt */,
@@ -211,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BF31FD4281D037800AC4E50 /* AcceptanceTests.swift in Sources */,
+				4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */,
 				4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
