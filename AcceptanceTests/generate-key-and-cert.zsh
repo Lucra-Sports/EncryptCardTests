@@ -19,4 +19,8 @@ openssl x509 \
     -in ./example-certificate.pem.txt \
     -out ./example-certificate.cer \
     -outform der
+    
+encoded=$(base64 -i ./example-certificate.cer)
+echo -n "***14340|$encoded***" > ./example-payment-gateway-key.txt
+
 popd

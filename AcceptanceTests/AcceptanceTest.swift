@@ -18,7 +18,7 @@ class AcceptanceTest: XCTestCase {
                                  withExtension: nil))
     }
                                
-    func testConvertingCertificateToPGEncryptKey() throws {
+    func testCertificate() throws {
         let cerUrl = try url(file: "example-certificate.cer")
         let cerData = try Data(contentsOf: cerUrl)
         let certificate = try XCTUnwrap(
@@ -28,12 +28,6 @@ class AcceptanceTest: XCTestCase {
             SecCertificateCopySubjectSummary(certificate)
         ) as String
         XCTAssertEqual("www.safewebservices.com", summary)
-        
-        let pgKey = "***14340|" + cerData.base64EncodedString() + "***"
-        let pgKeyUrl = URL(fileURLWithPath: #filePath)
-            .deletingLastPathComponent()
-            .appendingPathComponent("example-payment-gateway-key.txt")
-        try pgKey.write(to: pgKeyUrl, atomically: true, encoding: .ascii)
     }
     func testPGEncrypt() throws {
         let keyUrl = try url(file: exampleKeyFileName)
@@ -47,7 +41,7 @@ class AcceptanceTest: XCTestCase {
 
 }
 
-class EncryptTest: XCTestCase {    
+class EncryptTest: XCTestCase {
     func testValidKey() throws {
         let key = try! String(contentsOf: URL(fileURLWithPath: "/tmp/key.txt"))
         let encrypt = Encrypt()

@@ -10,10 +10,10 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "EncryptCard",
-            targets: ["EncryptCard"]),
+            targets: ["EncryptCard"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMajor(from: "1.5.1"))
@@ -23,10 +23,13 @@ let package = Package(
             name: "EncryptCard",
             dependencies: [
                 .product(name: "CryptoSwift", package: "CryptoSwift"),
-            ]),
+            ]
+        ),
         .testTarget(
             name: "EncryptCardTests",
-            dependencies: ["EncryptCard"]),
+            dependencies: ["EncryptCard"],
+            resources: [.copy("example-payment-gateway-key.txt")]
+        ),
     ],
     swiftLanguageVersions: [.v5]
 )
