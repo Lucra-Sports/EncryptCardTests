@@ -1,8 +1,7 @@
-prompt            = no
-
 [ req ]
-distinguished_name = req_distinguished_name
-x509_extensions = req_x509_extensions
+prompt                          = no
+distinguished_name              = req_distinguished_name
+x509_extensions                 = req_x509_extensions
 
 [ req_distinguished_name ]
 countryName                     = US
@@ -14,6 +13,6 @@ commonName                      = www.safewebservices.com
 emailAddress                    = support@safewebservices.com
 
 [ req_x509_extensions ]
-basicConstraints=CA:true
-subjectKeyIdentifier=hash
-authorityKeyIdentifier=keyid
+basicConstraints                = CA:true
+subjectKeyIdentifier            = hash
+authorityKeyIdentifier          = keyid
