@@ -34,7 +34,8 @@ let package = Package(
                 .copy("example-certificate.cer"),
                 .copy("example-certificate.pem.txt"),
                 .copy("example-payment-gateway-key.txt"),
-                .copy("example-private-key.txt")
+                .copy("example-private-key.txt"),
+                .copy("example-rsa-modulus.bin")
             ]
         ),
     ],
