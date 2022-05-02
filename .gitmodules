@@ -4,3 +4,4 @@
 [submodule "EncryptCard"]
 	path = EncryptCard
 	url = git@github.com:Lucra-Sports/EncryptCard.git
+	branch = refactor-init
