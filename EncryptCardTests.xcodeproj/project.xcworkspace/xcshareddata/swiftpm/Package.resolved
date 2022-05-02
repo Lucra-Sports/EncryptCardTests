@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "encryptcard",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Lucra-Sports/EncryptCard.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "25ca95afcb4eef126240f317223c1e18f3c2ddc4"
-      }
-    },
-    {
       "identity" : "swiftyrsa",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ThrownToys/SwiftyRSA.git",

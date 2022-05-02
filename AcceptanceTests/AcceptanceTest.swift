@@ -33,7 +33,7 @@ class AcceptanceTest: XCTestCase {
         URL(fileURLWithPath: #filePath)
             .deletingLastPathComponent()
             .deletingLastPathComponent()
-            .appendingPathComponent("Tests")
+            .appendingPathComponent("EncryptCard/Tests")
             .appendingPathComponent(file)
     }
                                
