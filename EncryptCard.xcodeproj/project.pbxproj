@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */; };
+		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
+		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
+		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
+		4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF32013281E9E7800AC4E50 /* SwiftyRSA */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4BF31FCB281D033100AC4E50 /*  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ""; sourceTree = "<group>"; };
+		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
+		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
+		4BF31FE2281D104B00AC4E50 /* PGSwipeUniMagMessageOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeUniMagMessageOptions.h; sourceTree = "<group>"; };
+		4BF31FE3281D104B00AC4E50 /* PGIpsReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGIpsReader.h; sourceTree = "<group>"; };
+		4BF31FE4281D104B00AC4E50 /* PGSwipeUnimag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeUnimag.h; sourceTree = "<group>"; };
+		4BF31FE5281D104B00AC4E50 /* PGMagnesafeSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMagnesafeSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FE6281D104B00AC4E50 /* PGMobileSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMobileSDK.h; sourceTree = "<group>"; };
+		4BF31FE7281D104B00AC4E50 /* PGEncryptedSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGEncryptedSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FE8281D104B00AC4E50 /* SwipeActivationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeActivationResult.h; sourceTree = "<group>"; };
+		4BF31FE9281D104B00AC4E50 /* PGSwipeDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeDevice.h; sourceTree = "<group>"; };
+		4BF31FEA281D104B00AC4E50 /* PGSwipeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeDelegate.h; sourceTree = "<group>"; };
+		4BF31FEB281D104B00AC4E50 /* AudioJackReaderType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioJackReaderType.h; sourceTree = "<group>"; };
+		4BF31FEC281D104B00AC4E50 /* PGEncrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGEncrypt.h; sourceTree = "<group>"; };
+		4BF31FED281D104B00AC4E50 /* PGSwipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeController.h; sourceTree = "<group>"; };
+		4BF31FEE281D104B00AC4E50 /* PGAccessoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAccessoryController.h; sourceTree = "<group>"; };
+		4BF31FEF281D104B00AC4E50 /* PGAudioJackConnectionDetectorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackConnectionDetectorDelegate.h; sourceTree = "<group>"; };
+		4BF31FF0281D104B00AC4E50 /* PGAudioJackConnectionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackConnectionDetector.h; sourceTree = "<group>"; };
+		4BF31FF1281D104B00AC4E50 /* SwipeReasonUnreadyForSwipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeReasonUnreadyForSwipe.h; sourceTree = "<group>"; };
+		4BF31FF2281D104B00AC4E50 /* PGCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGCard.h; sourceTree = "<group>"; };
+		4BF31FF3281D104B00AC4E50 /* CardReaderAutodetectResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardReaderAutodetectResult.h; sourceTree = "<group>"; };
+		4BF31FF4281D104B00AC4E50 /* PGSwipeIpsEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIpsEnterprise.h; sourceTree = "<group>"; };
+		4BF31FF5281D104B00AC4E50 /* PGAudioJackCardReaderTypeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGAudioJackCardReaderTypeDetector.h; sourceTree = "<group>"; };
+		4BF31FF6281D104B00AC4E50 /* PGKeyedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGKeyedCard.h; sourceTree = "<group>"; };
+		4BF31FF7281D104B00AC4E50 /* PGSwipeIps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIps.h; sourceTree = "<group>"; };
+		4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipeIDynamo.h; sourceTree = "<group>"; };
+		4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSwipedCard.h; sourceTree = "<group>"; };
+		4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ObjC-Bridging.h"; path = "AcceptanceTests/ObjC-Bridging.h"; sourceTree = SOURCE_ROOT; };
+		4BF32002281E364400AC4E50 /* ExploratoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploratoryTest.swift; sourceTree = "<group>"; };
+		4BF32010281E6DC500AC4E50 /* bin */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bin; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BF31FCD281D037800AC4E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */,
+				4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */,
+				4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BF31FC4281D02FF00AC4E50 = {
+			isa = PBXGroup;
+			children = (
+				4BF31FCB281D033100AC4E50 /*  */,
+				4BF31FD2281D037800AC4E50 /* AcceptanceTests */,
+				4BF32010281E6DC500AC4E50 /* bin */,
+				4BF31FD1281D037800AC4E50 /* Products */,
+				4BF31FD8281D066500AC4E50 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4BF31FD1281D037800AC4E50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BF31FD2281D037800AC4E50 /* AcceptanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
+				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
+				4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */,
+				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
+			);
+			path = AcceptanceTests;
+			sourceTree = "<group>";
+		};
+		4BF31FD8281D066500AC4E50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */,
+				4BF31FE1281D104B00AC4E50 /* PGMobileSDK */,
+			);
+			name = "Payment Gateway SDK";
+			path = "AcceptanceTests/react-native-nmi-bridge/ios/Payment Gateway SDK";
+			sourceTree = SOURCE_ROOT;
+		};
+		4BF31FE1281D104B00AC4E50 /* PGMobileSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4BF31FE2281D104B00AC4E50 /* PGSwipeUniMagMessageOptions.h */,
+				4BF31FE3281D104B00AC4E50 /* PGIpsReader.h */,
+				4BF31FE4281D104B00AC4E50 /* PGSwipeUnimag.h */,
+				4BF31FE5281D104B00AC4E50 /* PGMagnesafeSwipedCard.h */,
+				4BF31FE6281D104B00AC4E50 /* PGMobileSDK.h */,
+				4BF31FE7281D104B00AC4E50 /* PGEncryptedSwipedCard.h */,
+				4BF31FE8281D104B00AC4E50 /* SwipeActivationResult.h */,
+				4BF31FE9281D104B00AC4E50 /* PGSwipeDevice.h */,
+				4BF31FEA281D104B00AC4E50 /* PGSwipeDelegate.h */,
+				4BF31FEB281D104B00AC4E50 /* AudioJackReaderType.h */,
+				4BF31FEC281D104B00AC4E50 /* PGEncrypt.h */,
+				4BF31FED281D104B00AC4E50 /* PGSwipeController.h */,
+				4BF31FEE281D104B00AC4E50 /* PGAccessoryController.h */,
+				4BF31FEF281D104B00AC4E50 /* PGAudioJackConnectionDetectorDelegate.h */,
+				4BF31FF0281D104B00AC4E50 /* PGAudioJackConnectionDetector.h */,
+				4BF31FF1281D104B00AC4E50 /* SwipeReasonUnreadyForSwipe.h */,
+				4BF31FF2281D104B00AC4E50 /* PGCard.h */,
+				4BF31FF3281D104B00AC4E50 /* CardReaderAutodetectResult.h */,
+				4BF31FF4281D104B00AC4E50 /* PGSwipeIpsEnterprise.h */,
+				4BF31FF5281D104B00AC4E50 /* PGAudioJackCardReaderTypeDetector.h */,
+				4BF31FF6281D104B00AC4E50 /* PGKeyedCard.h */,
+				4BF31FF7281D104B00AC4E50 /* PGSwipeIps.h */,
+				4BF31FF8281D104B00AC4E50 /* PGSwipeIDynamo.h */,
+				4BF31FF9281D104B00AC4E50 /* PGSwipedCard.h */,
+			);
+			path = PGMobileSDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BF31FCF281D037800AC4E50 /* AcceptanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BF31FD5281D037800AC4E50 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */;
+			buildPhases = (
+				4BF31FCC281D037800AC4E50 /* Sources */,
+				4BF31FCD281D037800AC4E50 /* Frameworks */,
+				4BF31FCE281D037800AC4E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcceptanceTests;
+			packageProductDependencies = (
+				4BF31FD9281D066500AC4E50 /* EncryptCard */,
+				4BF32013281E9E7800AC4E50 /* SwiftyRSA */,
+			);
+			productName = AcceptanceTests;
+			productReference = 4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BF31FC5281D02FF00AC4E50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					4BF31FCF281D037800AC4E50 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCard" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BF31FC4281D02FF00AC4E50;
+			packageReferences = (
+				4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */,
+			);
+			productRefGroup = 4BF31FD1281D037800AC4E50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BF31FCF281D037800AC4E50 /* AcceptanceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BF31FCE281D037800AC4E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BF31FCC281D037800AC4E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */,
+				4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4BF31FC9281D02FF00AC4E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Debug;
+		};
+		4BF31FCA281D02FF00AC4E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+			};
+			name = Release;
+		};
+		4BF31FD6281D037800AC4E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.paulz.EncryptCard.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/ObjC-Bridging.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4BF31FD7281D037800AC4E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.paulz.EncryptCard.AcceptanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/ObjC-Bridging.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF31FC9281D02FF00AC4E50 /* Debug */,
+				4BF31FCA281D02FF00AC4E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BF31FD5281D037800AC4E50 /* Build configuration list for PBXNativeTarget "AcceptanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BF31FD6281D037800AC4E50 /* Debug */,
+				4BF31FD7281D037800AC4E50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThrownToys/SwiftyRSA.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BF31FD9281D066500AC4E50 /* EncryptCard */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = EncryptCard;
+		};
+		4BF32013281E9E7800AC4E50 /* SwiftyRSA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */;
+			productName = SwiftyRSA;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4BF31FC5281D02FF00AC4E50 /* Project object */;
+}
