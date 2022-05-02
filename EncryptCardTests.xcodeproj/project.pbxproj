@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3329E624281F687C0052BA00 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EncryptCard; path = ../EncryptCard; sourceTree = "<group>"; };
+		33175510281F6C7F00969A50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EncryptCard; path = ../EncryptCard; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		3329E623281F687C0052BA00 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				3329E624281F687C0052BA00 /* EncryptCard */,
+				33175510281F6C7F00969A50 /* EncryptCard */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCard" */;
+			buildConfigurationList = 4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCardTests" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -396,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCard" */ = {
+		4BF31FC8281D02FF00AC4E50 /* Build configuration list for PBXProject "EncryptCardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4BF31FC9281D02FF00AC4E50 /* Debug */,
