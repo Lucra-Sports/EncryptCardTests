@@ -2,7 +2,7 @@ name: build and test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, fix-ci ]
   pull_request:
     branches: [ main ]
 
@@ -15,6 +15,7 @@ jobs:
       device: iPhone 11 Pro
       scheme: AcceptanceTests
       project: EncryptCardTests.xcodeproj
+      destination: "platform=iOS Simulator,name=iPhone 11 Pro"
 
     steps:
       - name: Checkout
@@ -23,10 +24,17 @@ jobs:
           submodules: recursive
       - name: Resolve dependencies
         run: xcodebuild -resolvePackageDependencies -project $project -scheme $scheme
+      - name: Build
+        uses: sersoft-gmbh/xcodebuild-action@v1
+        with:
+          project: ${{ env.project }}
+          scheme: ${{ env.scheme }}
+          destination: ${{ env.destination }}
+          action: build
       - name: Test
         uses: sersoft-gmbh/xcodebuild-action@v1
         with:
-          project: $project
-          scheme: $scheme
-          destination: platform=iOS Simulator,name=iPhone 11 Pro
-          action: test
+          project: ${{ env.project }}
+          scheme: ${{ env.scheme }}
+          destination: ${{ env.destination }}
+          action: test-without-building

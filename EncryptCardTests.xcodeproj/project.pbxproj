@@ -16,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		33175510281F6C7F00969A50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EncryptCard; sourceTree = "<group>"; };
+		4B620A26281FB49C005D6D26 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 				3329E623281F687C0052BA00 /* Packages */,
 				4BF31FD2281D037800AC4E50 /* AcceptanceTests */,
 				4BF32010281E6DC500AC4E50 /* bin */,
+				4B620A26281FB49C005D6D26 /* workflows */,
 				4BF31FD1281D037800AC4E50 /* Products */,
 				4BF31FD8281D066500AC4E50 /* Frameworks */,
 			);
@@ -235,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -242,6 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -301,7 +305,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
@@ -318,7 +321,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/ObjC-Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,7 +374,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/react-native-nmi-bridge/ios/Payment\\ Gateway\\ SDK",
@@ -388,7 +389,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "${TARGET_NAME}/ObjC-Bridging.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

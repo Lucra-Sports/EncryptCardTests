@@ -19,7 +19,7 @@ class ExploratoryTest: XCTestCase {
             XCTAssertEqual(nsError.code, Int(errSecUnimplemented))
             XCTAssertEqual(nsError.userInfo["NSDescription"] as? String,
                            "Key generation failed, error -4")
-            XCTAssertEqual(SecCopyErrorMessageString(OSStatus(nsError.code), nil) as? String,
+            XCTAssertEqual(SecCopyErrorMessageString(OSStatus(nsError.code), nil) as String?,
                            "Function or operation not implemented.")
         }
         XCTAssertNil(newKey)
