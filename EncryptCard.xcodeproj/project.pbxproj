@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3329E617281F63DA0052BA00 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 3329E616281F63DA0052BA00 /* EncryptCard */; };
 		4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
@@ -15,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4BF31FCB281D033100AC4E50 /*  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ""; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
@@ -55,6 +55,7 @@
 			files = (
 				4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */,
 				4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */,
+				3329E617281F63DA0052BA00 /* EncryptCard in Frameworks */,
 				4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +66,6 @@
 		4BF31FC4281D02FF00AC4E50 = {
 			isa = PBXGroup;
 			children = (
-				4BF31FCB281D033100AC4E50 /*  */,
 				4BF31FD2281D037800AC4E50 /* AcceptanceTests */,
 				4BF32010281E6DC500AC4E50 /* bin */,
 				4BF31FD1281D037800AC4E50 /* Products */,
@@ -159,6 +159,7 @@
 			packageProductDependencies = (
 				4BF31FD9281D066500AC4E50 /* EncryptCard */,
 				4BF32013281E9E7800AC4E50 /* SwiftyRSA */,
+				3329E616281F63DA0052BA00 /* EncryptCard */,
 			);
 			productName = AcceptanceTests;
 			productReference = 4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */;
@@ -190,6 +191,7 @@
 			mainGroup = 4BF31FC4281D02FF00AC4E50;
 			packageReferences = (
 				4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */,
+				3329E615281F63DA0052BA00 /* XCRemoteSwiftPackageReference "EncryptCard" */,
 			);
 			productRefGroup = 4BF31FD1281D037800AC4E50 /* Products */;
 			projectDirPath = "";
@@ -409,6 +411,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3329E615281F63DA0052BA00 /* XCRemoteSwiftPackageReference "EncryptCard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lucra-Sports/EncryptCard.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ThrownToys/SwiftyRSA.git";
@@ -420,6 +430,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3329E616281F63DA0052BA00 /* EncryptCard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3329E615281F63DA0052BA00 /* XCRemoteSwiftPackageReference "EncryptCard" */;
+			productName = EncryptCard;
+		};
 		4BF31FD9281D066500AC4E50 /* EncryptCard */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EncryptCard;
