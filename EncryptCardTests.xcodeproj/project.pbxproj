@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		33175510281F6C7F00969A50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EncryptCard; path = ../EncryptCard; sourceTree = "<group>"; };
+		33175510281F6C7F00969A50 /* EncryptCard */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = EncryptCard; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
