@@ -106,7 +106,7 @@
 				4BF31FE1281D104B00AC4E50 /* PGMobileSDK */,
 			);
 			name = "Payment Gateway SDK";
-			path = "AcceptanceTests/react-native-nmi-bridge/ios/Payment Gateway SDK";
+			path = "react-native-nmi-bridge/ios/Payment Gateway SDK";
 			sourceTree = SOURCE_ROOT;
 		};
 		4BF31FE1281D104B00AC4E50 /* PGMobileSDK */ = {
