@@ -29,10 +29,12 @@ class AcceptanceTest: XCTestCase {
     }
     
     func url(file: String) throws -> URL {
-        URL(fileURLWithPath: #filePath)
+        Bundle(for: Self.self).bundleURL
             .deletingLastPathComponent()
             .deletingLastPathComponent()
-            .appendingPathComponent("EncryptCard/Tests")
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("SourcePackages/checkouts/EncryptCard/Tests/keys")
             .appendingPathComponent(file)
     }
                                
