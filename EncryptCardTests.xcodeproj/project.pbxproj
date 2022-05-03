@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BA2F5272821174D00CCC35C /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA2F5262821174D00CCC35C /* CryptoSwift */; };
 		4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */; };
 		4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF31FD9281D066500AC4E50 /* EncryptCard */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
@@ -55,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF31FDA281D066500AC4E50 /* EncryptCard in Frameworks */,
+				4BA2F5272821174D00CCC35C /* CryptoSwift in Frameworks */,
 				4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */,
 				4BF32014281E9E7800AC4E50 /* SwiftyRSA in Frameworks */,
 			);
@@ -169,6 +171,7 @@
 			packageProductDependencies = (
 				4BF31FD9281D066500AC4E50 /* EncryptCard */,
 				4BF32013281E9E7800AC4E50 /* SwiftyRSA */,
+				4BA2F5262821174D00CCC35C /* CryptoSwift */,
 			);
 			productName = AcceptanceTests;
 			productReference = 4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */;
@@ -200,6 +203,7 @@
 			mainGroup = 4BF31FC4281D02FF00AC4E50;
 			packageReferences = (
 				4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */,
+				4BA2F5252821174D00CCC35C /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = 4BF31FD1281D037800AC4E50 /* Products */;
 			projectDirPath = "";
@@ -417,6 +421,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4BA2F5252821174D00CCC35C /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4BF32012281E9E7800AC4E50 /* XCRemoteSwiftPackageReference "SwiftyRSA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ThrownToys/SwiftyRSA.git";
@@ -428,6 +440,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4BA2F5262821174D00CCC35C /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA2F5252821174D00CCC35C /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
 		4BF31FD9281D066500AC4E50 /* EncryptCard */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = EncryptCard;
