@@ -12,7 +12,7 @@ import CryptoSwift
 import SwiftyRSA
 
 class EncryptionTest: XCTestCase {
-    let input = String(repeating: "ABC-XYZ 0/9", count: 20)
+    let input = String(repeating: "😍ABC123☞❀₰℃ℛ«♘☭‱🔓", count: 20)
     let inputData = secureRandom(size: 245)
 
     func testAesEncrypt() throws {
