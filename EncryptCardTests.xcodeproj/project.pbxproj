@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4BA2F5272821174D00CCC35C /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA2F5262821174D00CCC35C /* CryptoSwift */; };
 		4BA875C2282120A800DEC88B /* EncryptCard in Frameworks */ = {isa = PBXBuildFile; productRef = 4BA875C1282120A800DEC88B /* EncryptCard */; };
+		4BA875C42821246900DEC88B /* EncryptionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA875C32821246900DEC88B /* EncryptionTest.swift */; };
 		4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */; };
 		4BF31FFA281D104C00AC4E50 /* PGMobileSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */; };
 		4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF32002281E364400AC4E50 /* ExploratoryTest.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		4B620A26281FB49C005D6D26 /* workflows */ = {isa = PBXFileReference; lastKnownFileType = folder; name = workflows; path = .github/workflows; sourceTree = "<group>"; };
+		4BA875C32821246900DEC88B /* EncryptionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionTest.swift; sourceTree = "<group>"; };
 		4BF31FD0281D037800AC4E50 /* AcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptanceTest.swift; sourceTree = "<group>"; };
 		4BF31FE0281D104B00AC4E50 /* PGMobileSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = PGMobileSDK.a; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				4BF31FFB281D10BA00AC4E50 /* ObjC-Bridging.h */,
 				4BF31FDF281D104B00AC4E50 /* Payment Gateway SDK */,
 				4BF31FD3281D037800AC4E50 /* AcceptanceTest.swift */,
+				4BA875C32821246900DEC88B /* EncryptionTest.swift */,
 				4BF32002281E364400AC4E50 /* ExploratoryTest.swift */,
 			);
 			path = AcceptanceTests;
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF31FD4281D037800AC4E50 /* AcceptanceTest.swift in Sources */,
+				4BA875C42821246900DEC88B /* EncryptionTest.swift in Sources */,
 				4BF32003281E364400AC4E50 /* ExploratoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

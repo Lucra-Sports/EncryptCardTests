@@ -28,18 +28,8 @@ class AcceptanceTest: XCTestCase {
         }
     }
     
-    func url(file: String) throws -> URL {
-        Bundle(for: Self.self).bundleURL
-            .deletingLastPathComponent()
-            .deletingLastPathComponent()
-            .deletingLastPathComponent()
-            .deletingLastPathComponent()
-            .appendingPathComponent("SourcePackages/checkouts/EncryptCard/Tests/keys")
-            .appendingPathComponent(file)
-    }
-                               
     func testCertificate() throws {
-        let cerUrl = try url(file: "example-certificate.cer")
+        let cerUrl = try keysUrl(file: "example-certificate.cer")
         let cerData = try Data(contentsOf: cerUrl)
         let certificate = try XCTUnwrap(
             SecCertificateCreateWithData(kCFAllocatorDefault, cerData as CFData)
@@ -51,7 +41,7 @@ class AcceptanceTest: XCTestCase {
     }
     
     func verifyDecrypt(usingEncryption: (CreditCard, String) throws -> String) throws {
-        let keyUrl = try url(file: "example-payment-gateway-key.txt")
+        let keyUrl = try keysUrl(file: "example-payment-gateway-key.txt")
         let key = try String(contentsOf: keyUrl)
         let testCard = CreditCard(
             cardNumber: "4111111111111111",
@@ -64,10 +54,9 @@ class AcceptanceTest: XCTestCase {
         let cardString = try decrypt(base64: encrypted)
         XCTAssertEqual(cardString, testCard.directPostString())
     }
-
-
+    
     func decrypt(base64 encrypted: String) throws -> String {
-        let pemUrl = try url(file: "example-private-key.txt")
+        let pemUrl = try keysUrl(file: "example-private-key.txt")
         let permString = try XCTUnwrap(String(contentsOf: pemUrl))
         let privateKey = try PrivateKey(pemEncoded: permString)
         XCTAssertNotNil(privateKey)
@@ -92,4 +81,14 @@ class AcceptanceTest: XCTestCase {
         let decryptedCard = try cypher.decrypt(cardData.bytes)
         return try XCTUnwrap(String(data: Data(decryptedCard), encoding: .ascii))
     }
+}
+
+func keysUrl(file: String) throws -> URL {
+    Bundle(for: AcceptanceTest.self).bundleURL
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+        .deletingLastPathComponent()
+        .appendingPathComponent("SourcePackages/checkouts/EncryptCard/Tests/keys")
+        .appendingPathComponent(file)
 }
