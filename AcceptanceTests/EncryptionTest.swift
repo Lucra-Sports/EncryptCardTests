@@ -30,6 +30,14 @@ class EncryptionTest: XCTestCase {
         XCTAssertEqual(decrypted, inputData)
     }
     
+    func testRsaEncryptRandomization() throws {
+        let key = try secKey()
+        let first = try rsaEncrypt(publicKey: key, data: inputData)
+        let second = try rsaEncrypt(publicKey: key, data: inputData)
+        XCTAssertNotEqual(first, second, "even when given same key and input data, output is different")
+        try XCTAssertEqual(secKey(), secKey(), "loaded from same certificates keys are equal")
+    }
+    
     func privateKey() throws -> PrivateKey {
         let pemUrl = try keysUrl(file: "example-private-key.txt")
         let permString = try XCTUnwrap(String(contentsOf: pemUrl))
