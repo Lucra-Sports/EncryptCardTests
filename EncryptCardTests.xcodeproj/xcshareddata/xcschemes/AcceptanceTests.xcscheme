@@ -20,20 +20,6 @@
                ReferencedContainer = "container:EncryptCardTests.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EncryptCardTests"
-               BuildableName = "EncryptCardTests"
-               BlueprintName = "EncryptCardTests"
-               ReferencedContainer = "container:../EncryptCard">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -46,23 +32,13 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EncryptCard"
-            BuildableName = "EncryptCard"
-            BlueprintName = "EncryptCard"
-            ReferencedContainer = "container:EncryptCard">
+            BlueprintIdentifier = "4BF31FCF281D037800AC4E50"
+            BuildableName = "AcceptanceTests.xctest"
+            BlueprintName = "AcceptanceTests"
+            ReferencedContainer = "container:EncryptCardTests.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EncryptCardTests"
-               BuildableName = "EncryptCardTests"
-               BlueprintName = "EncryptCardTests"
-               ReferencedContainer = "container:../EncryptCard">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
