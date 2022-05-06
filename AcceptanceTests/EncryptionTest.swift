@@ -18,22 +18,22 @@ class EncryptionTest: XCTestCase {
     func testAesEncrypt() throws {
         let randomKey = AES.randomIV(kCCKeySizeAES256)
         let irandomSeed = AES.randomIV(kCCBlockSizeAES128)
-        let encrypted = try aesEncrypt(key: Data(randomKey), seed: Data(irandomSeed), string: input)
+        let encrypted = try AES(key: Data(randomKey), seed: Data(irandomSeed)).encrypt(string: input)
         let cypher = try AES(key: randomKey, blockMode: CBC(iv: irandomSeed), padding: .pkcs5)
         let decrypted = try encrypted.decryptBase64ToString(cipher: cypher)
         XCTAssertEqual(decrypted, input)
     }
     func testRsaEncrypt() throws {
-        let encrypted = try rsaEncrypt(publicKey: secKey(), data: inputData)
+        let encrypted: String = try RSA(publicKey: secKey()).encrypt(data: inputData)
         let message = try EncryptedMessage(base64Encoded: encrypted)
         let decrypted = try message.decrypted(with: privateKey(), padding: .PKCS1).data
         XCTAssertEqual(decrypted, inputData)
     }
     
     func testRsaEncryptRandomization() throws {
-        let key = try secKey()
-        let first = try rsaEncrypt(publicKey: key, data: inputData)
-        let second = try rsaEncrypt(publicKey: key, data: inputData)
+        let rsa = try RSA(publicKey: secKey())
+        let first = try rsa.encrypt(data: inputData)
+        let second = try rsa.encrypt(data: inputData)
         XCTAssertNotEqual(first, second, "even when given same key and input data, output is different")
         try XCTAssertEqual(secKey(), secKey(), "loaded from same certificates keys are equal")
     }
