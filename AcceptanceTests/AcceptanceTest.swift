@@ -12,7 +12,7 @@ import SwiftyRSA
 
 class AcceptanceTest: XCTestCase {
     func testDecryptPGEncrypt() throws {
-        try verifyDecrypt { card, key in
+        try verifyEncryptedCardDecrypted { card, key in
             let card = PGKeyedCard(cardNumber: card.cardNumber,
                                    expirationDate: card.expirationDate,
                                    cvv: card.cvv)
@@ -22,7 +22,7 @@ class AcceptanceTest: XCTestCase {
         }
     }
     func testDecryptEncrypt() throws {
-        try verifyDecrypt { card, key in
+        try verifyEncryptedCardDecrypted { card, key in
             let encrypt = try EncryptCard(key: key)
             return try encrypt.encrypt(creditCard: card)
         }
@@ -63,8 +63,9 @@ class AcceptanceTest: XCTestCase {
         let newEncrypt = try EncryptCard(key: key)
         newEncrypt.privateEncryptorFactory = { AES(key: oldAesKeyData, seed: ivData) }
         let newOutput = try newEncrypt.encrypt(creditCard: card)
-        XCTAssertEqual(try decrypt(base64: newOutput), try decrypt(base64: oldOutput),
-        "decrypted outout is the same")
+        XCTAssertEqual(try decrypt(base64: newOutput),
+                       try decrypt(base64: oldOutput),
+                       "decrypted output is the same")
         XCTAssertNotEqual(newOutput, oldOutput, "different output due to random padding")
         let newDecoded = try XCTUnwrap(String(
             data: try XCTUnwrap(Data(base64Encoded: newOutput)), encoding: .ascii)
@@ -96,7 +97,7 @@ class AcceptanceTest: XCTestCase {
         XCTAssertEqual("www.safewebservices.com", summary)
     }
     
-    func verifyDecrypt(usingEncryption: (CreditCard, String) throws -> String) throws {
+    func verifyEncryptedCardDecrypted(usingEncryption: (CreditCard, String) throws -> String) throws {
         let keyUrl = try keysUrl(file: "example-payment-gateway-key.txt")
         let key = try String(contentsOf: keyUrl)
         let testCard = CreditCard(
