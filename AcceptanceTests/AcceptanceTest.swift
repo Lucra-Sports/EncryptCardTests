@@ -61,7 +61,7 @@ class AcceptanceTest: XCTestCase {
         let oldAesKeyData = try message.decrypted(with: privateKey, padding: .PKCS1).data
 
         let newEncrypt = try EncryptCard(key: key)
-        newEncrypt.privateEncryptorFactory = { AES(key: oldAesKeyData, seed: ivData) }
+        newEncrypt.createPrivateEncryptor = { AES(key: oldAesKeyData, seed: ivData) }
         let newOutput = try newEncrypt.encrypt(creditCard: card)
         XCTAssertEqual(try decrypt(base64: newOutput),
                        try decrypt(base64: oldOutput),
